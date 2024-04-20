@@ -1,0 +1,549 @@
+@import url("reset.css");
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+
+body {
+
+  line-height: 1;
+  font-family: "Raleway";
+  color: #464646;
+  overflow-x: hidden;
+  padding: 50px;
+  background: linear-gradient(135deg, #12a7e1, #61e8a3, #4A90E2, #6BF4C5, #85c5f0, #ceecff);
+    background-size: 600% 600%; /* Ajusta el tamaño del degradado */
+    animation: gradient 20s ease infinite; /* Animación de cambio de color */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+main {
+
+  display: flex;
+  flex-direction: column; /*las secciones tienen
+  que estar una sobre otra asi como esta el HTML*/
+  align-items: center;
+} 
+
+
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*Sección Menu*/
+section.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: 3%;
+  }
+  
+
+  .menu__header {
+    display: flex;
+    align-items: center; /
+  }
+  
+  .menu__header img {
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+  }
+  
+  .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 100px;
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+  }
+  
+
+
+
+/*Sección Title*/
+
+section.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 3%;
+    
+
+}
+
+.title__div{
+
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  margin-right: 30px;
+  
+
+}
+
+.title__container p:nth-child(2){
+  display: flex;
+  margin-right: 30px;
+  text-wrap:wrap;
+}
+
+.title__container h2:nth-child(1) {
+  margin-bottom: 15px;
+  font-size: 24px; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.title__profile {
+  order: 1;
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 30px;
+
+}
+
+.title__network{
+
+  display: flex;
+  margin: 18px 0px; /* Ajusta los márgenes horizontalmente */
+  gap: 20px; /* Espacio entre filas y columnas */
+  flex-direction: row;
+  align-items:start;
+  font-size: small;
+  font-weight: bold; 
+}
+
+
+
+
+/*Sección About*/
+
+section.about{
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de transparencia */
+  border-radius: 30px 30px 30px 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 19px;
+  text-align: center;
+  
+}
+ .about h3:nth-child(1){
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+ }
+ .about :nth-child(2){
+  margin-bottom: 1%;
+ }
+ .about p{
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  margin-left: 5%;
+  margin-right: 5%;
+ }
+
+/*Sección Skills*/
+
+.skills {
+  text-align: center; 
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 35px;
+}
+
+.skills__line {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+
+.skills__box {
+  display: flex;
+  justify-content: center;
+  width: 130px;
+  height: 100px;
+  margin: 10px; 
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de transparencia */
+  padding: 27px; 
+  margin-bottom: 5px; 
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: small;
+  
+}
+
+.skills__line :nth-child(3){    
+  display: none;  /* Esto es para oculpa PHP */
+}
+
+
+/*Sección Hobbies*/
+
+.hobbies{
+  text-align: center; 
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 3%;
+    
+}
+
+.hobbies__line {
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+
+.hobbies__box {
+  display: flex;
+  justify-content: center;
+  width: 130px;
+  height: 100px;
+  margin: 10px; 
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de transparencia */
+  padding: 27px; 
+  margin-bottom: 5px; 
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: small;
+  
+}
+
+.hobbies__line :nth-child(5),.hobbies__line :nth-child(6){    
+  display: none;  /* Esto es para oculpa PHP */
+  
+}
+
+
+/* Experiencia Académica*/
+
+.academic{
+
+  text-align: center; 
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5%;
+
+
+}
+
+.academic__courses{
+
+  Display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 25px;
+  margin-top: 1%;
+  font-size: 15px;
+}
+
+.academic__courses ul img{
+  justify-content: center;
+  border-radius: 8%;
+  overflow: hidden;
+  background-color: white;
+  padding:  30px ;
+  box-sizing: border-box;
+  height: 175px;
+  width: 260px;
+  object-fit: cover;
+  
+}
+
+.academic__courses__box:nth-child(3){
+  display: none;
+}
+
+
+/* experiencia*/
+
+.experience {
+  text-align: center;
+  text-wrap: nowrap; 
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column; /* Alinea las cajas de experiencia verticalmente */
+  align-items: center; /* Centra horizontalmente las cajas de experiencia */
+
+}
+
+.experience__box {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  width: 300px; /* Ancho fijo para cada caja de experiencia */
+  margin: 20px; /* Espacio entre las cajas */
+  text-align: center; /* Centra el contenido dentro de cada caja */
+  gap: 20px;
+}
+.experience__box :nth-child(2){
+  display: flex;
+  align-items: center;
+  font-size: small;
+  font-weight: bold;
+}
+.experience__box button{
+  display: flex;
+  gap: 12px;
+}
+.experience__description{
+
+  display: flex;
+  gap:12px
+}
+
+.experiencia__botao--repo,
+.experience__botao--demo {
+  display: flex;
+  margin-top: 12px;
+    background-color: rgba(255, 255, 255, 0.368); /* Blanco con 50% de transparencia */
+    color: #fff; 
+    padding: 10px 10px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; /* Efecto de transición suave en el cambio de color de fondo */
+}
+/* Estilo cuando el cursor pasa sobre el botón */
+.experiencia__botao--repo:hover,
+.experience__botao--demo:hover {
+    background-color: #2980b9; 
+}
+
+.experience__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.experience :nth-child(5){
+  display: none; /* ocultando un proyecto, lo editare cuando tengo otro en github*/
+
+}
+
+
+
+
+
+/*Contacto*/
+
+.formcontato__contacto {
+  display: flex;
+  margin-top: 8%;
+  align-items: center;
+  border-radius: 10%;
+
+}
+
+.formcontato__img {
+  margin-top: 30px;
+  width: 150px;
+  margin-right: 20px;
+  border-radius: 5%;
+}
+
+.formcontato__text {
+  display: inline;
+  flex: 1;
+  font-size: 14px;
+}
+
+.formcontato__title {
+  display: flex;
+  justify-content: start;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+
+.formcontato__subtext {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.formcontato__input,
+.formcontato__textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.formcontato__botao {
+ 
+  background-color: rgba(255, 255, 255, 0.368); /* Blanco con 50% de transparencia */
+  color: #fff; 
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formcontato__botao:hover {
+  background-color: #2980b9;
+}
+
+
+
+
+
+
+/*footeer*/
+
+.footer {
+  margin-top: 5%;
+  display: flex;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco con 50% de transparencia */
+  padding-inline: 50px;
+  border-radius: 20px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  
+}
+.footer__rodape{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+/*Tablet*/
+@media (max-width: 768px) {
+
+  /* Menú */
+  .menu__list {
+    margin-right: 50px;
+    display: none;
+  }
+
+  /* Title */
+  .title__div {
+    margin-right: 0;
+  }
+
+  /* Skills */
+  .skills__line {
+    justify-content: space-between;
+  }
+
+  /* Hobbies */
+  .hobbies__line {
+    justify-content: space-between;
+  }
+
+  /* Formación Académica */
+  .academic__courses {
+    justify-content: space-between;
+  }
+
+  /* Experiencia Profesional */
+  .experience__box {
+    width: 100%;
+    justify-content: center;
+  }
+  .formcontato__text{
+    text-align: center;
+    text-wrap: wrap;
+    width: 100%; /* Ancho total */
+    height: auto; /* Altura ajustable */
+    overflow-x: hidden; 
+  }
+
+  .formcontato__img {
+display: none;
+  }
+
+}
+
+/*Mobile*/
+@media (max-width: 425px) {
+
+  /* Menú */
+  .menu__list {
+    margin-right: 20px;
+    display: none;
+  }
+
+  /* Title */
+  .title__div {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  /* Sección sobre mi */
+  .about__container {
+    padding: 20px;
+  }
+
+  /* Skills, Hobbies, Formación Académica, Experiencia Profesional */
+  .skills__line,
+  .hobbies__line,
+  .academic__courses,
+  .experience__box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Contacto */
+  .formcontato__contacto {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Footer */
+  .footer__rodape {
+    margin-top: 20px;
+  }
+  .formcontato__text{
+    text-align: center;
+    text-wrap: wrap;
+    width: 100%; /* Ancho total */
+    height: auto; /* Altura ajustable */
+    overflow-x: hidden; 
+  }
+}
